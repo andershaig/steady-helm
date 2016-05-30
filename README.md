@@ -14,6 +14,7 @@ Resources
 - [Project Console in Firebase](https://console.firebase.google.com/project/tasks-f2d3f/)
 - [Project Deployed URL](https://tasks-f2d3f.firebaseapp.com/)
 - [Firebase Database Docs](https://firebase.google.com/docs/database/)
+- [Angular Material](https://material.angularjs.org/latest/)
 
 
 Developing
