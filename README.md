@@ -2,6 +2,11 @@ Tasks
 =============================
 A tasks application for myself using Firebase
 
+Project Info
+--------------
+[Ideas](IDEAS.md)
+[Todos](TODOS.md)
+
 
 Resources
 ---------
