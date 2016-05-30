@@ -4,8 +4,8 @@ A tasks application for myself using Firebase
 
 Project Info
 --------------
-[Ideas](IDEAS.md)
-[Todos](TODOS.md)
+- [Ideas](IDEAS.md)
+- [Todos](TODOS.md)
 
 
 Resources
@@ -19,6 +19,11 @@ Resources
 Developing
 ----------
 
+Current:
+- Run `gulp` in one terminal tab to start watching Sass
+- Run `live-server` in another to start watching files and live-reloading
+
+Future:
 - Run `firebase serve` using the Firebase CLI tool to launch a local server.
 - View the server at http://localhost:5000/
 - (To be filled out further)
