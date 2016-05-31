@@ -14,6 +14,8 @@ main {
   width: 100%;
   max-width: 1080px;
   padding: 24px;
-  background: #FFF url(../img/wheel.gif) center center no-repeat;
-  font-size: 1.2em;
+  
+  &.loading {
+    background: #FFF url(../img/wheel.gif) center center no-repeat;
+  }
 }
