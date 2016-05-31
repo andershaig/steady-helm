@@ -1,89 +1,70 @@
 /* ----------------------------
-Author: Anders Haig = minim.co
-Version: 1.1
-File: CSS Styles
+Author: Anders Haig
+Version: 0.0.1
 ---------------------------- */
-html, body, ul, ol, li, form, fieldset, legend {
-  margin: 0;
-  padding: 0; }
-
-h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0; }
-
-fieldset, img {
-  border: 0; }
-
-legend {
-  color: #000; }
-
-li {
-  list-style: none; }
-
-sup {
-  vertical-align: text-top; }
-
-sub {
-  vertical-align: text-bottom; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-caption, th, td {
-  text-align: left;
-  vertical-align: top;
-  font-weight: normal; }
-
-/* GLOBAL */
 html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+html {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   background: #778785;
   background: linear-gradient(to bottom, #778785 0%, #585e66 50%, #454652 100%); }
 
 body {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   background: url("../img/waves.png") 0 0 repeat;
   color: #555555;
   font-family: "Roboto", "Helvetica", "Arial","sans-serif";
   font-size: 62.5%;
   line-height: 1.5; }
 
-input[type=submit],
-label,
-select,
-.pointer {
-  cursor: pointer; }
+md-toolbar.header {
+  height: 77px;
+  background: #464854;
+  color: #FFF;
+  padding: 16px; }
 
-/* STANDARD */
-main {
-  width: 960px;
-  margin: 0 auto;
-  font-size: 1.2em; }
-
-/* Global Header Styles */
-#header {
-  background: #464854; }
-
-#branding {
+.branding {
   background: #212121;
-  float: left;
-  width: 90px; }
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; }
 
-#branding h1 {
-  height: 90px;
-  width: 90px;
-  margin: 0;
-  padding: 0; }
+.branding img {
+  width: 45px;
+  height: 45px; }
 
-/* Global Content Area Styles */
-#content {
+main {
+  position: absolute;
+  top: 77px;
+  left: 0;
+  width: calc(100% + 15px);
+  height: calc(100vh - 77px);
+  overflow-y: scroll;
+  padding: 0 64px 64px; }
+
+.content {
+  width: 100%;
+  max-width: 1080px;
+  padding: 24px;
   background: #FFF url(../img/wheel.gif) center center no-repeat;
-  padding: 20px 20px 0;
-  border: 1px solid #212121;
-  min-height: 550px; }
+  font-size: 1.2em; }

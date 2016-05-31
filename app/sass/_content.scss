@@ -1,0 +1,19 @@
+$content-height: calc(100vh - #{$header-height});
+
+main {
+  position: absolute;
+  top: $header-height;
+  left: 0;
+  width: calc(100% + 15px);
+  height: $content-height;
+  overflow-y: scroll;
+  padding: 0 64px 64px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1080px;
+  padding: 24px;
+  background: #FFF url(../img/wheel.gif) center center no-repeat;
+  font-size: 1.2em;
+}

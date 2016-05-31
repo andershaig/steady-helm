@@ -7,6 +7,7 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700">
+  <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css">
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -21,26 +22,14 @@
 </head>
 
 <body ng-app="steadyHelm" layout="column" ng-controller="TasksController as ctrl" ng-cloak>
-  <md-toolbar layout="row">
-    <md-button class="menu" hide-gt-sm ng-click="ctrl.toggleList()" aria-label="Show User List">
-      <md-icon md-svg-icon="menu" ></md-icon>
-    </md-button>
-    <h1>Steady Helm</h1>
+  <md-toolbar class="header md-whiteframe-z3" layout="row" layout-align="center center">
+    <div class="branding">
+      <img src="img/logo.png" alt="Steady Helm">
+    </div>
   </md-toolbar>
 
-  <main flex layout="row">
-    <md-sidenav  ng-click="ctrl.toggleList()" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2" >
-      <md-list>
-        <md-list-item ng-repeat="it in ctrl.users">
-            <md-button ng-click="ctrl.selectUser(it)" ng-class="{'selected' : it === ctrl.selected }">
-              <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-              {{it.name}}
-            </md-button>
-        </md-list-item>
-      </md-list>
-    </md-sidenav>
-
-    <md-content flex id="content">
+  <main layout="row" layout-align="center start">
+    <div class="content">
       <md-icon md-svg-icon="{{ctrl.selected.avatar}}" class="avatar"></md-icon>
       <h2>{{ctrl.selected.name}}</h2>
       <p>{{ctrl.selected.content}}</p>
@@ -48,7 +37,17 @@
       <md-button class="share" md-no-ink ng-click="ctrl.makeContact(ctrl.selected)" aria-label="Share with {{ ctrl.selected.name }}">
         <md-icon md-svg-icon="share"></md-icon>
       </md-button>
-    </md-content>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies massa a ullamcorper eleifend. Aliquam ultricies auctor eros, viverra vehicula odio tristique et. Curabitur metus est, egestas in neque quis, imperdiet venenatis velit. Phasellus ornare dignissim maximus. Quisque non blandit nisl. In venenatis pharetra bibendum. Cras at scelerisque lacus, ut laoreet metus. Cras ut lobortis eros. Mauris accumsan dolor sed nisl interdum ullamcorper. Mauris feugiat sollicitudin turpis, vitae facilisis nunc lobortis sed.</p>
+
+      <p>Nunc quis est velit. Curabitur vel tincidunt sem. Duis id velit vel justo pellentesque sagittis sed non dolor. Integer eu leo cursus quam tincidunt molestie sit amet a odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam enim, suscipit id sodales id, egestas vel ex. Ut faucibus egestas sem in mollis. Donec a lacus dictum, pellentesque dolor id, auctor eros.</p>
+
+      <p>Nunc vestibulum laoreet libero, sit amet posuere nibh convallis at. Morbi iaculis rutrum nunc, ornare sodales eros aliquam at. Pellentesque ac eros sapien. Praesent feugiat tellus mauris, quis pharetra tortor eleifend egestas. Sed at finibus quam. Sed commodo dui vel magna sodales blandit. In consequat, purus at porttitor tempus, diam ante ornare lorem, eget efficitur diam ex vel felis. Aenean bibendum felis et facilisis luctus. Vestibulum et libero a neque venenatis finibus.</p>
+
+      <p>Curabitur id diam sed dolor semper placerat. Cras non est vel libero eleifend tempor. Nam ultrices aliquet diam ut ultrices. Aenean convallis orci auctor leo cursus, sit amet egestas mi blandit. Aliquam consequat congue porttitor. Proin elit arcu, faucibus sit amet eleifend sed, lacinia et risus. Fusce auctor et mi non semper. Aliquam hendrerit euismod risus nec ultrices. Proin vitae ante in lacus convallis placerat. Mauris semper eros euismod dolor egestas venenatis. Vestibulum dictum iaculis tempor. Praesent vel nibh maximus, porttitor nisl non, viverra tortor. Aliquam erat volutpat. Ut semper leo ultrices, venenatis enim et, ultricies erat.</p>
+
+      <p>Aliquam erat volutpat. Mauris malesuada mauris at luctus fermentum. Nullam tempus blandit aliquet. Maecenas turpis sapien, vehicula vel molestie vitae, dictum ut leo. Suspendisse eu ante vel odio elementum fringilla nec eget turpis. Donec dapibus tincidunt nunc, sed condimentum felis molestie vel. Praesent iaculis sem in nulla pharetra, eu rutrum ante scelerisque. Morbi vulputate ultricies urna, eu ultrices est. Nunc lacinia mollis lorem, in blandit mi cursus in. Vivamus nec urna efficitur, imperdiet sem at, placerat nisl. Curabitur non velit ac massa convallis condimentum quis eget sapien. Quisque porttitor arcu vestibulum sem pulvinar pulvinar at at nisi. Sed felis urna, rutrum vitae lectus eget, finibus fringilla dui. Curabitur ut ante vitae quam euismod vehicula. Maecenas vitae sapien eu tortor feugiat malesuada at vulputate elit.</p>
+    </div>
   </main>
 
   <!-- <div id="wrapper">

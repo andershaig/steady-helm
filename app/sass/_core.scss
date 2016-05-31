@@ -1,0 +1,29 @@
+// All Pages
+html {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #778785;
+  background: linear-gradient(to bottom, #778785 0%, #585e66 50%, #454652 100%);
+}
+
+body {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url('../img/waves.png') 0 0 repeat;
+  color: #555555;
+  font-family: "Roboto", "Helvetica", "Arial","sans-serif";
+  font-size: 62.5%;
+  line-height: 1.5;
+}
