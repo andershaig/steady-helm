@@ -20,7 +20,7 @@ html {
   padding: 0;
   overflow: hidden;
   background: #778785;
-  background: linear-gradient(to bottom, #778785 0%, #585e66 50%, #454652 100%); }
+  background: linear-gradient(to bottom, #778785 0%, #585E66 50%, #454652 100%); }
 
 body {
   position: absolute;
@@ -33,14 +33,16 @@ body {
   overflow: hidden;
   background: url("../img/waves.png") 0 0 repeat;
   color: #555555;
-  font-family: "Roboto", "Helvetica", "Arial","sans-serif";
-  font-size: 62.5%;
-  line-height: 1.5; }
+  font-family: Roboto, Helvetica, Arial, sans-serif; }
 
 md-toolbar.header {
-  height: 77px;
+  height: 125px;
   background: #464854;
-  color: #FFF;
+  color: #FFF; }
+
+.md-toolbar-tools {
+  height: 77px;
+  max-height: 77px;
   padding: 16px; }
 
 .branding {
@@ -55,16 +57,17 @@ md-toolbar.header {
 
 main {
   position: absolute;
-  top: 77px;
+  top: 125px;
   left: 0;
   width: calc(100% + 15px);
-  height: calc(100vh - 77px);
+  height: calc(100vh - 125px);
   overflow-y: scroll;
   padding: 0 64px 64px; }
 
 .content {
   width: 100%;
   max-width: 1080px;
-  padding: 24px; }
+  padding: 24px;
+  background-color: #FFF; }
   .content.loading {
     background: #FFF url(../img/wheel.gif) center center no-repeat; }

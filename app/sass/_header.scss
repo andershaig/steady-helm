@@ -1,9 +1,14 @@
-$header-height: 77px;
+$header-height: 125px;
 
 md-toolbar.header {
   height: $header-height;
   background: #464854;
   color: #FFF;
+}
+
+.md-toolbar-tools {
+  height: 77px;
+  max-height: 77px;
   padding: 16px;
 }
 

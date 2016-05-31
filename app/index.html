@@ -22,21 +22,31 @@
 </head>
 
 <body ng-app="steadyHelm" layout="column" ng-controller="TasksController as ctrl" ng-cloak>
-  <md-toolbar class="header md-whiteframe-z3" layout="row" layout-align="center center">
-    <div class="branding">
-      <img src="img/logo.png" alt="Steady Helm">
+  <md-toolbar class="header md-whiteframe-z3">
+    <div class="md-toolbar-tools" layout="row" layout-align="center center">
+      <div class="branding">
+        <img src="img/logo.png" alt="Steady Helm">
+      </div>
     </div>
+
+    <md-tabs class="nav-tabs" md-selected="tabs.selectedIndex">
+      <md-tab id="tab1" aria-controls="tab1-content">Tab 1</md-tab>
+      <md-tab id="tab2" aria-controls="tab2-content">Tab 2</md-tab>
+      <md-tab id="tab3" aria-controls="tab3-content">Tab 3</md-tab>
+    </md-tabs>
   </md-toolbar>
 
   <main layout="row" layout-align="center start">
     <div class="content">
+      <ng-switch on="tabs.selectedIndex">
+        <div ng-switch-when="0">Tab 1</div>
+        <div ng-switch-when="1">Tab 2</div>
+        <div ng-switch-when="2">Tab 3</div>
+      </ng-switch>
+
       <md-icon md-svg-icon="{{ctrl.selected.avatar}}" class="avatar"></md-icon>
       <h2>{{ctrl.selected.name}}</h2>
       <p>{{ctrl.selected.content}}</p>
-
-      <md-button class="share" md-no-ink ng-click="ctrl.makeContact(ctrl.selected)" aria-label="Share with {{ ctrl.selected.name }}">
-        <md-icon md-svg-icon="share"></md-icon>
-      </md-button>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies massa a ullamcorper eleifend. Aliquam ultricies auctor eros, viverra vehicula odio tristique et. Curabitur metus est, egestas in neque quis, imperdiet venenatis velit. Phasellus ornare dignissim maximus. Quisque non blandit nisl. In venenatis pharetra bibendum. Cras at scelerisque lacus, ut laoreet metus. Cras ut lobortis eros. Mauris accumsan dolor sed nisl interdum ullamcorper. Mauris feugiat sollicitudin turpis, vitae facilisis nunc lobortis sed.</p>
 
@@ -49,20 +59,6 @@
       <p>Aliquam erat volutpat. Mauris malesuada mauris at luctus fermentum. Nullam tempus blandit aliquet. Maecenas turpis sapien, vehicula vel molestie vitae, dictum ut leo. Suspendisse eu ante vel odio elementum fringilla nec eget turpis. Donec dapibus tincidunt nunc, sed condimentum felis molestie vel. Praesent iaculis sem in nulla pharetra, eu rutrum ante scelerisque. Morbi vulputate ultricies urna, eu ultrices est. Nunc lacinia mollis lorem, in blandit mi cursus in. Vivamus nec urna efficitur, imperdiet sem at, placerat nisl. Curabitur non velit ac massa convallis condimentum quis eget sapien. Quisque porttitor arcu vestibulum sem pulvinar pulvinar at at nisi. Sed felis urna, rutrum vitae lectus eget, finibus fringilla dui. Curabitur ut ante vitae quam euismod vehicula. Maecenas vitae sapien eu tortor feugiat malesuada at vulputate elit.</p>
     </div>
   </main>
-
-  <!-- <div id="wrapper">
-    <div id="header">
-      <div id="branding">
-        <h1><a href="/"><img src="img/logo.png" alt="Steady Helm" /></a></h1>
-      </div>
-    </div>
-    
-    <div id="content">
-      <ul>
-        <li ng-repeat="user in ctrl.users">{{user.name}}</li>
-      </ul>
-    </div>
-  </div> -->
 
   <script src="../node_modules/angular/angular.js"></script>
   <script src="../node_modules/angular-animate/angular-animate.js"></script>

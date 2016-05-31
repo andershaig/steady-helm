@@ -9,7 +9,7 @@ html {
   padding: 0;
   overflow: hidden;
   background: #778785;
-  background: linear-gradient(to bottom, #778785 0%, #585e66 50%, #454652 100%);
+  background: linear-gradient(to bottom, #778785 0%, #585E66 50%, #454652 100%);
 }
 
 body {
@@ -23,7 +23,5 @@ body {
   overflow: hidden;
   background: url('../img/waves.png') 0 0 repeat;
   color: #555555;
-  font-family: "Roboto", "Helvetica", "Arial","sans-serif";
-  font-size: 62.5%;
-  line-height: 1.5;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
 }

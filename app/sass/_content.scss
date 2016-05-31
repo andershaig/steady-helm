@@ -14,7 +14,8 @@ main {
   width: 100%;
   max-width: 1080px;
   padding: 24px;
-  
+  background-color: #FFF;
+
   &.loading {
     background: #FFF url(../img/wheel.gif) center center no-repeat;
   }
