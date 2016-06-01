@@ -1,3 +1,4 @@
-- [ ] Sign up for Github again and create a repo to track development
+- [x] Sign up for Github again and create a repo to track development
+- [x] Setup Gulp, Sass
+- [ ] Get Autoprefixer working
 - [ ] Further fill out this file
-- [ ] Setup Gulp, Sass & Autoprefixer
