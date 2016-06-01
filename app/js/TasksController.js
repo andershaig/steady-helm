@@ -11,14 +11,14 @@
     var self = this;
 
     self.selected = null;
-    self.users    = [];
+    self.tasks    = [];
 
-    // Load all registered users
+    // Load all tasks
     tasksService
-          .loadAllUsers()
-          .then( function( users ) {
-            self.users    = [].concat(users);
-            self.selected = users[0];
+          .loadAllTasks()
+          .then(function (tasks) {
+            self.tasks    = [].concat(tasks);
+            self.selected = tasks[0];
           });
   }
 })();

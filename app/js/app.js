@@ -1,5 +1,7 @@
 var app = angular.module('steadyHelm', ['ngMaterial', 'tasks']);
 
+// app.constant('$MD_THEME_CSS','');
+
 app.config(function ($mdThemingProvider, $mdIconProvider) {
   $mdIconProvider
     .defaultIconSet("./img/svg/avatars.svg", 128)
@@ -47,7 +49,7 @@ app.config(function ($mdThemingProvider, $mdIconProvider) {
   //       'A400': '#acacb8',
   //       'A700': '#0b0b0d'
   //   };
-    
+
   //   $mdThemingProvider
   //       .definePalette('customBackground', 
   //                       customBackground);
