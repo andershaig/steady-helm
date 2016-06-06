@@ -41,7 +41,11 @@
       <!-- Today -->
       <div ng-switch-when="0" layout="row" layout-align="center start">
         <div class="card" ng-repeat="task in ctrl.tasks">
-          <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox> {{task.text}}
+          <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox>
+
+          <md-input-container>
+            <textarea ng-model="task.text"></textarea>
+          </md-input-container>
         </div>
       </div>
 
