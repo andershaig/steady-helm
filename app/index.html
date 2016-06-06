@@ -30,8 +30,8 @@
     </div>
 
     <md-tabs class="nav-tabs" md-selected="tabs.selectedIndex" md-center-tabs>
-      <md-tab id="view_today" aria-controls="view_today-content">Today's Tasks</md-tab>
-      <md-tab id="view_all" aria-controls="view_all-content">All Tasks</md-tab>
+      <md-tab id="view_today" aria-controls="view_today-content">Today</md-tab>
+      <md-tab id="view_all" aria-controls="view_all-content">All</md-tab>
       <md-tab id="view_settings" aria-controls="view_settings-content">Settings</md-tab>
     </md-tabs>
   </md-toolbar>
@@ -40,12 +40,16 @@
     <ng-switch on="tabs.selectedIndex">
       <!-- Today -->
       <div ng-switch-when="0" layout="row" layout-align="center start">
-        <div class="card" ng-repeat="task in ctrl.tasks">
-          <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox>
+        <div class="card" layout="row" ng-repeat="task in ctrl.tasks">
+          <div class="card-quick-actions">
+            <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox>
+          </div>
 
-          <md-input-container>
-            <textarea ng-model="task.text"></textarea>
-          </md-input-container>
+          <div class="card-text" flex>
+            <md-input-container>
+              <textarea ng-model="task.text"></textarea>
+            </md-input-container>
+          </div>
         </div>
       </div>
 
@@ -58,7 +62,9 @@
 
       <!-- Settings -->
       <div ng-switch-when="2" layout="row" layout-align="center start">
-        Settings
+        <div class="content">
+          <h2>Settings</h2>
+        </div>
       </div>
     </ng-switch>
   </main>

@@ -1,11 +1,39 @@
 .card {
+  @include card;
   width: 100%;
   min-width: 250px;
   max-width: 400px;
-  margin: 16px; // TEMP
-  padding: 24px; // TEMP
-  background: #FFFFFF;
-  background: linear-gradient(top, #FFFFFF 0%, #F7F8F9 100%);
-  border-radius: 5px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), inset 0 -3px 1px 0 rgba(0, 0, 0, 0.12);
+  margin: 16px;
+  padding: 24px;
+}
+
+.card-quick-actions {
+
+  md-checkbox {
+
+  }
+}
+
+.card-text {
+
+  md-input-container {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    .md-input {
+      padding: 4px;
+      border: 2px solid transparent;
+      border-radius: 2px;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.1);
+      }
+
+      &:focus {
+        background-color: #FFFFFF;
+        border: 2px solid rgba(0,0,0,0.2);
+      }
+    }
+  }
 }

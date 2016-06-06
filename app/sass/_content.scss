@@ -11,10 +11,12 @@ main {
 }
 
 .content {
+  @include card;
   width: 100%;
   max-width: 1080px;
   padding: 24px;
   background-color: #FFF;
+  border-radius: 2px;
 
   &.loading {
     background: #FFF url(../img/wheel.gif) center center no-repeat;
