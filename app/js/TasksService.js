@@ -14,31 +14,28 @@
   function TasksService($q) {
     var tasks = [
       {
-        text: 'Morning Routine',
-        subTasks: [
-          {
-            text: 'Brush teeth',
-            isComplete: false
-          },
-          {
-            text: 'Walk dogs',
-            isComplete: false
-          },
-          {
-            text: 'Eat breakfast',
-            isComplete: false
-          }
-        ],
+        text: 'Brush teeth',
         isComplete: false,
-        createdTime: new Date(),
-        priority: 1
+        completedTime: null,
+        createdTime: new Date()
+      },
+      {
+        text: 'Walk dogs',
+        isComplete: false,
+        completedTime: null,
+        createdTime: new Date()
+      },
+      {
+        text: 'Eat breakfast',
+        isComplete: false,
+        completedTime: null,
+        createdTime: new Date()
       },
       {
         text: 'Take vitamins',
-        subTasks: [],
         isComplete: false,
-        createdTime: new Date(),
-        priority: 2
+        completedTime: null,
+        createdTime: new Date()
       }
     ];
 
