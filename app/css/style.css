@@ -62,7 +62,7 @@ main {
   width: calc(100% + 15px);
   height: calc(100vh - 125px);
   overflow-y: scroll;
-  padding: 0 64px 64px; }
+  padding: 16px 64px 64px; }
 
 .content {
   width: 100%;
@@ -73,7 +73,10 @@ main {
     background: #FFF url(../img/wheel.gif) center center no-repeat; }
 
 .card {
-  margin: 48px;
+  width: 100%;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 16px;
   padding: 24px;
   background: #FFFFFF;
   background: linear-gradient(top, #FFFFFF 0%, #F7F8F9 100%);

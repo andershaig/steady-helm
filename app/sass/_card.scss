@@ -1,5 +1,8 @@
 .card {
-  margin: 48px; // TEMP
+  width: 100%;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 16px; // TEMP
   padding: 24px; // TEMP
   background: #FFFFFF;
   background: linear-gradient(top, #FFFFFF 0%, #F7F8F9 100%);

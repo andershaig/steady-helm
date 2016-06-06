@@ -30,39 +30,33 @@
     </div>
 
     <md-tabs class="nav-tabs" md-selected="tabs.selectedIndex" md-center-tabs>
-      <md-tab id="tab1" aria-controls="tab1-content">Tab 1</md-tab>
-      <md-tab id="tab2" aria-controls="tab2-content">Tab 2</md-tab>
-      <md-tab id="tab3" aria-controls="tab3-content">Tab 3</md-tab>
+      <md-tab id="view_today" aria-controls="view_today-content">Today's Tasks</md-tab>
+      <md-tab id="view_all" aria-controls="view_all-content">All Tasks</md-tab>
+      <md-tab id="view_settings" aria-controls="view_settings-content">Settings</md-tab>
     </md-tabs>
   </md-toolbar>
 
-  <main layout="row" layout-align="center start">
-    <div class="card" ng-repeat="task in ctrl.tasks">
-      <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox> {{task.text}}
-    </div>
-    <!-- <div class="content">
-      <ng-switch on="tabs.selectedIndex">
-        <div ng-switch-when="0">Tab 1</div>
-        <div ng-switch-when="1">Tab 2</div>
-        <div ng-switch-when="2">Tab 3</div>
-      </ng-switch>
+  <main>
+    <ng-switch on="tabs.selectedIndex">
+      <!-- Today -->
+      <div ng-switch-when="0" layout="row" layout-align="center start">
+        <div class="card" ng-repeat="task in ctrl.tasks">
+          <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox> {{task.text}}
+        </div>
+      </div>
 
-      <ul>
-        <li ng-repeat="task in ctrl.tasks">{{task.name}}</li>
-      </ul>
+      <!-- All -->
+      <div ng-switch-when="1" layout="row" layout-align="center start">
+        <div class="card" ng-repeat="task in ctrl.tasks">
+          <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox> {{task.text}}
+        </div>
+      </div>
 
-      <h2>Sample Content</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies massa a ullamcorper eleifend. Aliquam ultricies auctor eros, viverra vehicula odio tristique et. Curabitur metus est, egestas in neque quis, imperdiet venenatis velit. Phasellus ornare dignissim maximus. Quisque non blandit nisl. In venenatis pharetra bibendum. Cras at scelerisque lacus, ut laoreet metus. Cras ut lobortis eros. Mauris accumsan dolor sed nisl interdum ullamcorper. Mauris feugiat sollicitudin turpis, vitae facilisis nunc lobortis sed.</p>
-
-      <p>Nunc quis est velit. Curabitur vel tincidunt sem. Duis id velit vel justo pellentesque sagittis sed non dolor. Integer eu leo cursus quam tincidunt molestie sit amet a odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam enim, suscipit id sodales id, egestas vel ex. Ut faucibus egestas sem in mollis. Donec a lacus dictum, pellentesque dolor id, auctor eros.</p>
-
-      <p>Nunc vestibulum laoreet libero, sit amet posuere nibh convallis at. Morbi iaculis rutrum nunc, ornare sodales eros aliquam at. Pellentesque ac eros sapien. Praesent feugiat tellus mauris, quis pharetra tortor eleifend egestas. Sed at finibus quam. Sed commodo dui vel magna sodales blandit. In consequat, purus at porttitor tempus, diam ante ornare lorem, eget efficitur diam ex vel felis. Aenean bibendum felis et facilisis luctus. Vestibulum et libero a neque venenatis finibus.</p>
-
-      <p>Curabitur id diam sed dolor semper placerat. Cras non est vel libero eleifend tempor. Nam ultrices aliquet diam ut ultrices. Aenean convallis orci auctor leo cursus, sit amet egestas mi blandit. Aliquam consequat congue porttitor. Proin elit arcu, faucibus sit amet eleifend sed, lacinia et risus. Fusce auctor et mi non semper. Aliquam hendrerit euismod risus nec ultrices. Proin vitae ante in lacus convallis placerat. Mauris semper eros euismod dolor egestas venenatis. Vestibulum dictum iaculis tempor. Praesent vel nibh maximus, porttitor nisl non, viverra tortor. Aliquam erat volutpat. Ut semper leo ultrices, venenatis enim et, ultricies erat.</p>
-
-      <p>Aliquam erat volutpat. Mauris malesuada mauris at luctus fermentum. Nullam tempus blandit aliquet. Maecenas turpis sapien, vehicula vel molestie vitae, dictum ut leo. Suspendisse eu ante vel odio elementum fringilla nec eget turpis. Donec dapibus tincidunt nunc, sed condimentum felis molestie vel. Praesent iaculis sem in nulla pharetra, eu rutrum ante scelerisque. Morbi vulputate ultricies urna, eu ultrices est. Nunc lacinia mollis lorem, in blandit mi cursus in. Vivamus nec urna efficitur, imperdiet sem at, placerat nisl. Curabitur non velit ac massa convallis condimentum quis eget sapien. Quisque porttitor arcu vestibulum sem pulvinar pulvinar at at nisi. Sed felis urna, rutrum vitae lectus eget, finibus fringilla dui. Curabitur ut ante vitae quam euismod vehicula. Maecenas vitae sapien eu tortor feugiat malesuada at vulputate elit.</p>
-    </div> -->
+      <!-- Settings -->
+      <div ng-switch-when="2" layout="row" layout-align="center start">
+        Settings
+      </div>
+    </ng-switch>
   </main>
 
   <script src="../node_modules/angular/angular.js"></script>
