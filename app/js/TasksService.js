@@ -1,8 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('tasks')
-         .service('tasksService', ['$q', TasksService]);
+  angular.module('tasks').service('tasksService', ['$q', TasksService]);
 
   /**
    * Tasks DataService

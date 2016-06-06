@@ -1,8 +1,7 @@
 (function(){
 
   angular.module('tasks')
-       .controller('TasksController',
-        ['tasksService', TasksController]);
+       .controller('TasksController', ['tasksService', TasksController]);
 
   /**
    * Main Controller
