@@ -9,31 +9,38 @@
 
 .card-quick-actions {
 
-  md-checkbox {
-
-  }
 }
 
-.card-text {
+md-checkbox {
 
-  md-input-container {
-    display: block;
-    margin: 0;
-    padding: 0;
+}
 
-    .md-input {
-      padding: 4px;
-      border: 2px solid transparent;
-      border-radius: 2px;
+md-input-container.card-text {
+  display: block;
+  margin: 0;
+  padding: 0;
 
-      &:hover {
-        background-color: rgba(0,0,0,0.1);
-      }
+  .md-input {
+    padding: 4px 8px;
+    border-radius: 2px;
+    border: 2px solid transparent;
 
-      &:focus {
-        background-color: #FFFFFF;
-        border: 2px solid rgba(0,0,0,0.2);
-      }
+    &:hover {
+      border: 2px solid rgba(0,0,0,0.26);
     }
+
+    &:focus {
+      background-color: #FFFFFF;
+      border: 2px solid rgba(0,0,0,0.54);
+    }
+  }
+
+  &.md-input-focused .md-input {
+    padding: 4px 8px;
+    border: 2px solid rgba(0,0,0,0.54);
+  }
+
+  .md-errors-spacer {
+    display: none;
   }
 }

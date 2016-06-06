@@ -88,16 +88,21 @@ main {
   margin: 16px;
   padding: 24px; }
 
-.card-text md-input-container {
+md-input-container.card-text {
   display: block;
   margin: 0;
   padding: 0; }
-  .card-text md-input-container .md-input {
-    padding: 4px;
-    border: 2px solid transparent;
-    border-radius: 2px; }
-    .card-text md-input-container .md-input:hover {
-      background-color: rgba(0, 0, 0, 0.1); }
-    .card-text md-input-container .md-input:focus {
+  md-input-container.card-text .md-input {
+    padding: 4px 8px;
+    border-radius: 2px;
+    border: 2px solid transparent; }
+    md-input-container.card-text .md-input:hover {
+      border: 2px solid rgba(0, 0, 0, 0.26); }
+    md-input-container.card-text .md-input:focus {
       background-color: #FFFFFF;
-      border: 2px solid rgba(0, 0, 0, 0.2); }
+      border: 2px solid rgba(0, 0, 0, 0.54); }
+  md-input-container.card-text.md-input-focused .md-input {
+    padding: 4px 8px;
+    border: 2px solid rgba(0, 0, 0, 0.54); }
+  md-input-container.card-text .md-errors-spacer {
+    display: none; }

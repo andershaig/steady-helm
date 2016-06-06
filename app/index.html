@@ -45,8 +45,8 @@
             <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox>
           </div>
 
-          <div class="card-text" flex>
-            <md-input-container>
+          <div flex>
+            <md-input-container class="card-text">
               <textarea ng-model="task.text"></textarea>
             </md-input-container>
           </div>
@@ -55,8 +55,8 @@
 
       <!-- All -->
       <div ng-switch-when="1" layout="row" layout-align="center start">
-        <div class="card" ng-repeat="task in ctrl.tasks">
-          <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox> {{task.text}}
+        <div class="content">
+          <h2>Placeholder for all</h2>
         </div>
       </div>
 
