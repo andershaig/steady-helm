@@ -37,8 +37,8 @@
   </md-toolbar>
 
   <main layout="row" layout-align="center start">
-    <div class="card">
-      <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1"></md-checkbox> Sample Task
+    <div class="card" ng-repeat="task in ctrl.tasks">
+      <md-checkbox ng-model="task.isComplete" aria-label="Task Complete"></md-checkbox> {{task.text}}
     </div>
     <!-- <div class="content">
       <ng-switch on="tabs.selectedIndex">

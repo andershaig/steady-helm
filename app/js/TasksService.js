@@ -35,7 +35,7 @@
         priority: 1
       },
       {
-        text: 'Take vitamins'
+        text: 'Take vitamins',
         subTasks: [],
         isComplete: false,
         createdTime: new Date(),
